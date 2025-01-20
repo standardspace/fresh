@@ -20,10 +20,6 @@ Alpine.store("app", {
     this.on = window.matchMedia("(prefers-color-scheme: dark)").matches;
   },
   isDark: Alpine.$persist(false),
-  isSidebarOpened: Alpine.$persist(false),
-  isSidebarOpenedMobile: Alpine.$persist(false),
-  activeSidebar: Alpine.$persist("dashboard"),
-  activeSidebarMenu: Alpine.$persist(""),
   isPanelOpened: Alpine.$persist(false),
 });
 //Start Alpine JS
