@@ -5,6 +5,9 @@ Main SCSS file / Fresh
 @import 'abstracts/colors';
 @import 'abstracts/animations';
 
+@import 'abstracts/typography';
+@import 'abstracts/images';
+
 @import "../../node_modules/bulma/bulma.sass";
 
 @import 'layout/navbar';
@@ -13,7 +16,6 @@ Main SCSS file / Fresh
 @import 'layout/footer';
 @import 'components/buttons';
 @import 'components/dropdowns';
-@import 'components/hamburger';
 @import 'components/cards';
 @import 'components/forms';
 @import 'components/testimonials';

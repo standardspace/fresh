@@ -1,0 +1,79 @@
+---
+const { 
+    imageUrl, 
+    imageAlt,
+    heroTitle,
+    heroSubheading,
+    buttons
+} = Astro.props;
+---
+<section class="uos-hero is-fullheight">
+    <div class="uos-hero__body container">
+        <div class="columns is-desktop">
+            <div class="uos-hero__text-container column is-6 is-offset-6 has-text-right-tablet p-5">
+                <h1 class="uos-hero__title is-1" set:html={heroTitle}></h1>
+                <p class="uos-hero__subheading" set:html={heroSubheading}></p>
+                <div>
+                    <div>
+                        {
+                            buttons.map((data) => <a href={data.url} class="button cta" class:list={['button', 'cta', data.btnClass]}>{data.text}</a>)
+                        }
+                    </div>
+                      
+                </div>
+            </div>
+        </div>
+    </div>
+    <img class="uos-hero__image-bg" src={imageUrl} alt={imageAlt} />
+</section>
+
+<style>
+    .uos-hero {
+        height: calc(100dvh - 70px);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: 767px) {
+            justify-content: flex-end;
+        }
+    }
+
+    .uos-hero__body {
+        z-index: 1;
+        padding: 1rem;
+
+
+    }
+
+    .uos-hero__text-container {
+        background: rgba(10, 31, 41, 0.8);
+        color: white;
+    }
+
+    .uos-hero__title {
+        /* font-size: clamp(1.5rem, 0.6724rem + 4.1379vw, 3rem); */
+        font-size: clamp(1rem, -0.5862rem + 7.931vw, 3.875rem);
+        text-transform: uppercase;
+        line-height: 1; 
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    .uos-hero__subheading {
+        font-size: clamp(1rem, 0.4483rem + 2.7586vw, 2rem);
+        margin-top: 10px;
+    }
+
+    .uos-hero__image-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>

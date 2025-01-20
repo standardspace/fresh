@@ -17,19 +17,14 @@ Navbar
     box-shadow: none !important;
   }
 
-  //Responsive menu icon
-  .navbar-burger {
-    width: 5rem;
-    height: 5rem;
-  }
 
   //Brand
   .navbar-brand {
     min-height: 5rem;
 
     img {
-      max-height: 36px !important;
-      height: 36px;
+      max-height: 50px !important;
+      height: 50px;
     }
 
     //Removing navbar item default hover behaviour
@@ -115,21 +110,5 @@ Navbar
         color: $primary;
       }
     }
-  }
-}
-
-//Cloned fixed navbar
-#navbar-clone {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: $white;
-  transform: translateY(-100%);
-  z-index: 100;
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
-
-  &.is-active {
-    transform: translateY(0);
   }
 }

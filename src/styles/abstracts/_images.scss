@@ -1,0 +1,16 @@
+figure {
+    position: relative;
+    img {
+        z-index: 0;
+    }
+}
+
+figcaption {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 1;
+    position: absolute;
+    padding: 1em;
+    bottom: 0;
+    left: 0;
+}

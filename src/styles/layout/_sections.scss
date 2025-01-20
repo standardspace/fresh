@@ -2,19 +2,6 @@
 Section Styles
 ========================================================================== */
 
-body {
-  font-family: $font;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $font-heading;
-}
-
 //Sections
 .section {
   position: relative;
@@ -47,13 +34,11 @@ h6 {
 
   .title,
   .subtitle {
-    font-family: $font-heading;
+    // font-family: $font-heading;
   }
 
   .subtitle {
-    &.is-muted {
-      color: $muted-grey;
-    }
+
   }
 
   .overlay {
@@ -73,7 +58,7 @@ h6 {
 
   .title,
   .subtitle {
-    font-family: $font-heading;
+
   }
 
   .subtitle {
@@ -87,7 +72,7 @@ h6 {
 .divider {
   height: 3px;
   border-radius: 50px;
-  background: $secondary;
+  background: $uos-red;
   width: 60px;
 
   &.is-centered {
@@ -147,13 +132,13 @@ h6 {
   }
 
   h4 {
-    font-family: $font;
-    font-weight: 600;
-    color: $blue-grey;
+    // font-family: $font;
+    // font-weight: 600;
+    // color: $blue-grey;
   }
 
   p {
-    color: $muted-grey;
+    // color: $muted-grey;
   }
 }
 
@@ -174,10 +159,10 @@ h6 {
     height: 420px;
 
     .plan-name {
-      font-family: $font;
-      font-weight: 600;
-      font-size: 1.4rem;
-      color: $blue-grey;
+      // font-family: $font;
+      // font-weight: 600;
+      // font-size: 1.4rem;
+      // color: $blue-grey;
     }
 
     img {
@@ -187,11 +172,11 @@ h6 {
     }
 
     .price {
-      position: relative;
-      font-family: $font;
-      font-weight: 700;
-      font-size: 2.4rem;
-      color: $blue-grey;
+      // position: relative;
+      // font-family: $font;
+      // font-weight: 700;
+      // font-size: 2.4rem;
+      // color: $blue-grey;
 
       &:before {
         content: "$";

@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'ReplicaPro';
+    src: url('/fonts/ReplicaPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.body {
+    font-family: 'ReplicaPro', sans-serif;
+}
+
+// $font: "ReplicaPro", serif;
+// $family-serif: $font;
+// $family-primary: $family-serif;
+// $font-heading: $font;
+
+body p {
+    margin-bottom: 1rem !important;
+    widows: 3;
+}
+
+.typo-cols-2 {
+
+    @media screen and (min-width: 768px) {
+        column-count: 2;
+        column-gap: 2rem;       
+    }
+}
+
+.callout {
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    &::before {
+        content: "";
+        background: url(/img/icons/quote.svg) no-repeat;
+        position: absolute;
+        display: block;
+        font-size: 10rem;
+        left: -2rem;
+        top: -5rem;
+        right: 4rem;
+        height: 100%;
+        color: hsla(183, 35%, 58%, 0.8);
+        border-radius: 1rem;
+        z-index: -1;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: -2rem;
+        top: 0;
+        right: 4rem;
+        height: 100%;
+        background-color: hsla(183, 35%, 58%, 0.2);
+        border-radius: 1rem;
+        z-index: -1;
+    }
+
+    p {
+        position: relative;
+        &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 2em;
+            height: 2em;
+            background: url(/img/icons/quote.svg) no-repeat;
+            transform: rotate(180deg);
+        }
+    }
+}

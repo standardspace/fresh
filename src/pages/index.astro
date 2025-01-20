@@ -1,44 +1,148 @@
 ---
 import Layout from '../layouts/Default.astro'
 import Navbar from '../components/Navbar.astro'
-import NavbarClone from '../components/NavbarClone.astro'
-const title = 'Home'
+import Hero from '../components/Hero.astro'
+const title = 'Integrated report 2024'
 ---
 
 <Layout title={title}>
-  <section class="hero is-fullheight is-grey">
-    <Navbar />
+  <Navbar />
+  <Hero 
+    imageUrl="/img/placeholder/37331.jpg" 
+    imageAlt="Campus scene"
+    heroTitle="Integrated report <span>2024</span>"
+    heroSubheading="Financial Statements for the year ended 31 July 2024"
+    buttons = {
+      [
+        { 
+          text: "Download as PDF",
+          url: "/",
+          btnClass: 'primary-btn raised mr-2'
+        },
+        {
+          text: "Discover",
+          url: "#content"
+        }
+      ]
+    }
+  />
 
-    <NavbarClone />
-
-    <div class="hero-body">
-      <div class="container">
-        <div class="columns is-vcentered">
-          <div class="column is-5 landing-caption">
-            <h1 class="title is-1 is-bold is-spaced">Integrated<br /> Report <span>2024</span></h1>
-            <h2 class="subtitle is-5 is-muted">Financial Statements for the year ended 31 July 2024</h2>
-            <div>
-              <a class="button cta primary-btn raised mr-2">Download as PDF</a>
-              <a class="button cta"> Discover</a>
-            </div>
-          </div>
-          <div class="column is-7">
-            <img src="/img/illustrations/worker.svg" class="hero-image" alt="Description" />
-          </div>
+  <section class="section is-medium" id="content">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-7">
+          <h2 class="title" style="font-size: clamp(1rem, -0.5862rem + 7.931vw, 3.875rem); line-height: 1;">What we do</h2>
+          <div class="divider"></div>
+          <p class="is-size-5 pt-5">Welcome to our 2023-24 integrated report. We were delighted to
+            welcome Professor Nic Beech as Vice-Chancellor at the beginning
+            of the academic year. This year has also been an opportunity for
+            us to be clear about our current strengths and reflect on how we
+            can realise the potential of the University of Salford in a newly
+            challenging operating environment.</p>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-12 typo-cols-2">
+          <p>
+            During the current year we have begun
+            to refine our purpose – to enrich lives
+            – and are generating new ideas and
+            knowledge that contribute towards a
+            more sustainable, equitable, healthy,
+            creative and prosperous society.
+            Competition has become a defining
+            feature of higher education in recent
+            years, especially in student recruitment,
+            in research funding and in university
+            rankings.
+          </p>
+          <p>
+            Unsurprisingly, elements of competition
+            filter through to internal structures,
+            creating silos and lost opportunities to
+            add greater value for stakeholders. Truly
+            working to enrich lives challenges us
+            to look at ourselves and how we work
+            with each other, both across University
+            activities and with our broad range of
+            partners. Collaborative advantage –
+            achieving things together that we could
+            not achieve alone – is redefining how
+            we do things at Salford.
+            We believe we can only realise the
+            potential collaborative advantage
+            offers if we develop as a connected
+            community. To us, this means building
+            a culture where every student and
+            colleague knows they matter by
+            championing opportunity and inclusion
+            for all. In this year’s integrated report
+            we are proud to showcase how
+            collaborative advantage is already
+            becoming our default way of working
+            and is enriching lives.
+          </p>
+          <p>
+            We are nationally recognised for
+            our inclusive approach to working
+            with industry and there are great
+            opportunities to show what happens
+            when this approach is brought to bear
+            on the big issues that face society:
+            issues such as health inequalities, socioeconomic
+            inclusion and productivity,
+            sustainable development, and advancing
+            digital and technical progress. Our
+            new corporate strategy, focusing
+            on innovation and how collaborative
+            advantage supports our longer-term
+            goals, will be finalised early in the 2024-
+            25 academic year. We look forward to
+            sharing further details next year.
+          </p>
         </div>
       </div>
     </div>
   </section>
-
-  <section class="section is-medium">
+  <section class="section section-light-grey is-medium">
     <div class="container">
-      <div class="title-wrapper has-text-centered">
-        <h2 class="title is-2">Great Power Comes</h2>
-        <h3 class="subtitle is-5 is-muted">With great Responsability</h3>
-        <div class="divider is-centered"></div>
+      <div class="columns">
+        <div class="column is-7">
+          <h2 class="title" style="font-size: clamp(1rem, -0.5862rem + 7.931vw, 3.875rem); line-height: 1;">Highlights from our community</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="column is-5">
+          <figure class="image is-3by2">
+            <img src="/img/placeholder/Caroline Redman Lusher 236 N1105.jpg" alt="Placeholder image" />
+            <figcaption>Award winning singer and musician Caroline
+              Redman Lusher’s Rock Choir perform at the
+              awarding of her Honorary Doctorate at summer
+              graduation.</figcaption>
+          </figure>          
+        </div>
       </div>
-
-      <div class="feature-cards content-wrapper">
+      <div class="columns">
+        <div class="column is-5">
+          <figure class="image">
+            <img src="/img/placeholder/Jeanette Gamble_1.jpg" alt="Placeholder image" />
+          </figure>
+          <p class="m-2">
+            The 2023 Alumni Lifetime
+            Achievement Award went to
+            Jeanette Gamble, who graduated
+            in 2000 with a BSc in Business
+            Information Systems. Jeanette
+            went on to become one of global
+            investment bank Morgan Stanley’s
+            youngest female Managing
+            Directors, and has since used her
+            expertise and influence to break
+            down gender barriers within the
+            world of tech.
+          </p>     
+        </div>
+      </div>
+      <!-- <div class="feature-cards content-wrapper">
         <div class="columns">
           <div class="column is-4">
             <div class="feature-card is-bordered has-text-centered is-feature-reveal">
@@ -89,10 +193,108 @@ const title = 'Home'
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 
+  <section class="section is-medium">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-7">
+          <div class="columns">
+            <blockquote class="callout column is-8">
+              <p>
+                The pace of change, development
+                and improvement will increase,
+                and I know that our University of
+                Salford community is more than
+                up to this challenge.
+              </p>
+            </blockquote>
+          </div>
+          <div class="column p-0">
+            <h2 class="title is-uppercase" style="font-size: clamp(1rem, -0.5862rem + 7.931vw, 3.875rem); line-height: 1;">
+              A message from <span style="font-size: clamp(1rem, -0.931rem + 9.6552vw, 4.5rem); font-weight: 800">our vice-chancellor</span>
+            </h2>
+            <div class="divider"></div>
+            <p class="is-size-5 pt-6">
+              This year has been a time of change, both within the University and across the external
+              environment, a new Government brings new opportunities, new challenges and new focus on
+              our purpose and our work. Whilst the new Government is now in place, the sector’s key issues
+              around long term funding, inflationary pressures, and student and staff wellbeing remain.
+              We aim to bring the same innovative and collaborative mindset that we have in research and
+              teaching to being business-like and values-led in how we operate and navigate the external
+              environment.
+            </p>
+          </div>
+
+        </div>
+        <div class="column is-5">
+          <figure class="image is-3by4">
+            <img src="/img/placeholder/nic-beech.jpg" alt="Placeholder image" />
+            <figcaption>Professor Nic Beech, Vice-Chancellor</figcaption>
+          </figure>
+      </div>
+    
+    </div>
+    <div class="columns">
+      <div class="column is-12 typo-cols-2">
+
+        <p>
+          It has been a privilege for me in my first year at Salford
+          to meet with over 2,000 members of staff, many
+          students, trades unions, businesses and key partners
+          such as Salford City Council. It has been a delight to
+          join such a diverse, inclusive and purposeful community,
+          and we aspire to being evermore inclusive. We are in the
+          process of refreshing our strategy and all our partners,
+          students and staff are playing key roles in developing the
+          vision of how we want to shape our future.
+        </p>
+        <p>
+          It has been a year of excitement with the launch of our
+          Centre for Sustainable Innovation, the Craig Easton
+          project and the achievement of an Ofsted Good rating
+          to name but a few moments that you can read more
+          about in this report. We have also been developing
+          our physical and digital environment and we are now
+          embarking on the next wave of our campus connectivity
+          plan - our new health clinic and Greater Manchester
+          Institute of Technology buildings are moving from the
+          drawing board to the construction phase - and changing
+          our systems to meet the needs of our students and
+          staff, both now and in the future.
+        </p>
+        <p>
+          This summer we took the opportunity to include
+          speeches from our recent graduates within our
+          graduation ceremonies. It was inspiring to hear about
+          their experiences during their time with us, and the
+          ongoing impact that studying at Salford is having on
+          their lives.
+        </p>
+        <p>
+          Our new academic year starts with a renewed focus
+          on our overarching aim, innovating to enrich lives. For
+          some time our core focus has been on industry and
+          now is the time to broaden this to place more emphasis
+          on inclusivity and social purpose. This will be done
+          through the lens of four key themes: building prosperity
+          and equity, enabling healthier living, improving the
+          environment and sustainability, and developing cutting
+          edge creative and innovative practice.
+        </p>
+        <p>
+          I am looking forward to seeing our students, colleagues
+          and partners bring all of this to life. The pace of change,
+          development and improvement will increase, and I know
+          that our University of Salford community is more than
+          up to this challenge.
+        </p>
+      </div>
+    </div>
+  </section>
+<!-- 
   <section class="section is-medium section-feature-grey">
     <div class="container">
       <div class="title-wrapper has-text-centered">
@@ -398,9 +600,9 @@ const title = 'Home'
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <div id="auth-modal" class="modal">
+  <!-- <div id="auth-modal" class="modal">
     <div class="modal-background modal-dismiss"></div>
     <div class="modal-content">
       <div class="flex-card auth-card">
@@ -431,5 +633,5 @@ const title = 'Home'
       </div>
     </div>
     <button class="modal-close is-large modal-dismiss" aria-label="close"></button>
-  </div>
+  </div> -->
 </Layout>
