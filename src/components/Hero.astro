@@ -12,6 +12,7 @@ const {
         <div class="columns is-desktop">
             <div class="uos-hero__text-container column is-6 is-offset-6 has-text-right-tablet p-5">
                 <h1 class="uos-hero__title is-1" set:html={heroTitle}></h1>
+                <div class="divider"></div>
                 <p class="uos-hero__subheading" set:html={heroSubheading}></p>
                 <div>
                     <div>
@@ -29,7 +30,7 @@ const {
 
 <style>
     .uos-hero {
-        height: calc(100dvh - 70px);
+        min-height: calc(100dvh - 3.8rem);
         position: relative;
         display: flex;
         justify-content: center;
@@ -37,6 +38,11 @@ const {
 
         @media (min-width: 767px) {
             justify-content: flex-end;
+
+            .divider {
+                justify-self: right;
+                width: 30ch;
+            }
         }
     }
 
@@ -66,6 +72,7 @@ const {
     .uos-hero__subheading {
         font-size: clamp(1rem, 0.4483rem + 2.7586vw, 2rem);
         margin-top: 10px;
+        line-height: 1;
     }
 
     .uos-hero__image-bg {

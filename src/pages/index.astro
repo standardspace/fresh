@@ -2,6 +2,8 @@
 import Layout from '../layouts/Default.astro'
 import Navbar from '../components/Navbar.astro'
 import Hero from '../components/Hero.astro'
+import BarChart from '../components/BarChart.astro'
+
 const title = 'Integrated report 2024'
 ---
 
@@ -292,6 +294,27 @@ const title = 'Integrated report 2024'
           up to this challenge.
         </p>
       </div>
+    </div>
+  </section>
+  <section class="section section-light-grey ">
+    <div class="container">
+      <div class="columns">
+        <div class="coulmn is-5">
+          <h2 class="title">Capital expenditure</h2>
+          <div class="divider"></div>
+          <p class="pt-3">We continue to invest in our estate
+            and equipment, spending £11.5m.
+            Schemes in 2023-24 included the
+            commencement of the Institute of
+            Technology, Health and acoustics
+            buildings as well as expenditure on
+            One Digital Campus and equipment.</p>
+        </div>
+        <div class="column is-7">
+          <BarChart />
+        </div>
+      </div>
+
     </div>
   </section>
 <!-- 

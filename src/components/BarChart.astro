@@ -1,0 +1,69 @@
+---
+import { Chart } from "astro-charts/components";
+import { ChartColors, transparentize } from "astro-charts/utils";
+
+const data = [
+    { year: "2010", count: 10 },
+    { year: "2011", count: 20 },
+    { year: "2012", count: 15 },
+    { year: "2013", count: 25 },
+    { year: "2014", count: 22 },
+    { year: "2015", count: 30 },
+    { year: "2016", count: 28 },
+];
+---
+
+<div class="chart-container">
+    <!-- <Chart
+      type="bar"
+      options={{
+        devicePixelRatio: 1,
+        scales: { y: { beginAtZero: true } },
+      }}
+      data={{
+        labels: ["1", "2", "3"],
+        datasets: [
+          {
+            label: "Staff costs",
+            data: [123, 234, 234],
+            borderColor: ChartColors.Red,
+            backgroundColor: ChartColors.Red,
+            borderWidth: 1,
+          },
+          {
+            label: "Other operating expenses",
+            data: [346, 233, 123],
+            borderColor: ChartColors.Blue,
+            backgroundColor: ChartColors.Blue,
+            borderWidth: 1,
+          },
+        ],
+      }}
+    /> -->
+    <Chart
+      type="bar"
+      options={{
+        devicePixelRatio: 1,
+        scales: { y: { beginAtZero: true } },
+      }}
+      data={{
+        labels: data.map(row => row.year),
+        datasets: [
+          {
+            label: 'Cash expenditure (£m)',
+            data: data.map(row => row.count),
+            backgroundColor: '#c8102e'
+          }
+        ],
+      }}
+    />
+
+  </div>
+
+  <style>
+    .chart-container {
+      svg {
+        max-width: 100%;
+      }
+    }
+  </style>
